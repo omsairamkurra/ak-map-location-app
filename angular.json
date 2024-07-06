@@ -66,9 +66,13 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "maps-app:build"
+          },
           "configurations": {
             "production": {
-              "buildTarget": "maps-app:build:production"
+              "buildTarget": "maps-app:build:production",
+              "browserTarget": "maps-app:build:production"
             },
             "development": {
               "buildTarget": "maps-app:build:development"
@@ -99,5 +103,6 @@
   },
   "cli": {
     "analytics": false
-  }
+  },
+  "defaultProject": "maps-app"
 }
